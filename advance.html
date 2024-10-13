@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+   
+</head>
+<div class="abc">
+<h1>Donate Now</h1>
+    <h2>Thank you for being a champion for us </h2></div>
+    
+<body>
+    
+    <div id="formContainer">
+        <div class="form-group">
+            <label for="soilType">Donation Type:</label>
+            <select id="soilType">
+                <option value="black">ONE TIME</option>
+                <option value="red">MONTHLY</option>
+                <option value="sandy">YEARLY</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <div id="upi"></div>
+            <label for="money">Donation Value Rs:</label>
+            <!-- <select id="irrigation">
+                <option value="20">10</option>
+                <option value="20">20</option>
+                <option value="25">30</option>
+                <option value="30">40</option>
+                <option value="50">50</option>
+                <option value="20">60</option>
+                <option value="20">70</option>
+                <option value="20">80</option>
+                <option value="20">90</option>
+                <option value="20">100</option>
+            </select> -->
+            <input type="number" id="money" placeholder="Enter Money">
+        </div>
+
+        <!-- <div class="form-group">
+            <label for="cropType">Crop Type:</label>
+            <select id="cropType">
+                <option value="wheat">Wheat</option>
+                <option value="rice">Rice</option>
+                <option value="cotton">Cotton</option>
+                <option value="maize">Maize</option>
+            </select>
+        </div> -->
+
+        <button onclick="generateQRCode()">Next</button>
+        <script>
+            function generateQRCode() {
+            // Get the input value (amount)
+            var amount = document.getElementById("money").value;
+
+            // Validate if the amount is not empty
+            if (amount === "") {
+                alert("Please enter an amount");
+                return;
+            }
+
+            // Clear any existing QR code
+            document.getElementById("upi").innerHTML = "";
+
+            // Generate the QR code with the UPI URL
+            var upiUrl = `upi://pay?pa=prince05025646-1@oksbi&pn=PRINCE FONDATION&am=${amount}&cu=INR`;
+
+            // Create the QR code
+            new QRCode(document.getElementById("upi"), upiUrl);
+        }
+        </script>
+
+        <div id="technologyRecommendation"></div>
+    </div>
+    <script src="advance.js"></script>
+    </body>
+    </html>

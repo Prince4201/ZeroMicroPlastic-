@@ -1,0 +1,81 @@
+html , body{
+    height:100%;
+    margin:0;
+    font-size:16px;
+    font-family: 'Lato','sans-serif';
+    font-weight: 400;
+    line-height: 1.8em;
+    color:#666;
+}
+.pimg1 {
+    background-image: url("a back micro.jpg");
+    min-height: 100%;
+}
+.pimg2 {
+    background-image: url("plastic food.jpg");
+    min-height: 400px;
+}
+.pimg3{
+    background-image: url("Back Micro3.jpg");
+    min-height: 400px;
+}
+.pimg4{
+    background-image: url("pollution plastic.jpg");
+    min-height: 400px;
+}
+.container{ width: 80%;
+    margin: 0 auto;
+    padding: 20px;}
+.pimg1 ,.pimg2,.pimg3,.pimg4 {
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.ptext{
+    position: absolute;
+    top:50%;
+    width: 100%;text-align: center;
+    color:black;
+    font-size:25px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+.textbg{
+    background: #373a38;
+    color: white;
+    padding: 20px;
+}
+.section{
+    padding: 50px 80px;
+    text-align: center;
+
+}
+.section-light{
+    background-color: antiquewhite;
+    color:#fbfbfb;
+
+}
+.section-light{
+    background-color: #2c2e25;
+    color:#fcffff;
+
+}
+.footer {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  .social-icons a {
+    color: #000000;
+    margin: 0 10px;
+    text-decoration: none;
+  }
+  
+  .social-icons a:hover {
+    color: #f9feff;
+  }
