@@ -11,9 +11,9 @@ body {
     background: url('donate.jpg') no-repeat center center/cover;
     position: relative;
 }
-.abc{justify-content: left;
+/* .abc{justify-content: left;
     padding: 20px;
-    color: rgb(36, 11, 11);}
+    color: rgb(36, 11, 11);} */
 body::before {
     content: '';
     position: absolute;
