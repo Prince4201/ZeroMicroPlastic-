@@ -1,32 +1,94 @@
-/* Contact Form */
-body{background: url('donation.jpeg');} 
+body {
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), 
+    url('donation.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Contact form (login form) design */
 .contact form {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
+    max-width: 400px;
+    width: 100%;
 }
 
+/* Form label styling */
 .contact form label {
     margin-top: 10px;
+    font-weight: bold;
+    color: #2c3e50;
 }
 
-.contact form input, 
-.contact form textarea {
-    padding: 10px;
+/* Input field design */
+.contact form input {
+    padding: 12px;
     margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: 14px;
+    transition: border 0.3s ease;
 }
 
+/* Input field focus effect */
+.contact form input:focus {
+    border-color: #3498db;  /* Light blue border when focused */
+    outline: none;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5); /* Subtle glow effect */
+}
+
+/* Button styling for interaction */
 .contact form button {
-    margin-top: 15px;
-    padding: 10px;
+    margin-top: 20px;
+    padding: 12px;
     background-color: #2c3e50;
     color: white;
     border: none;
     border-radius: 5px;
+    font-size: 16px;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
+/* Button hover and click effect */
 .contact form button:hover {
     background-color: #34495e;
+    transform: translateY(-2px); /* Creates a slight lift effect on hover */
+}
+
+.contact form button:active {
+    background-color: #1a242f;
+    transform: translateY(0); /* Press-down effect */
+}
+
+/* Extra link styling (forgot password, sign-up) */
+.contact form a {
+    margin-top: 15px;
+    text-align: center;
+    display: block;
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact form a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+/* Responsive design for smaller devices */
+@media (max-width: 600px) {
+    .contact form {
+        padding: 20px;
+        width: 90%;
+    }
 }
