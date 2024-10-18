@@ -4,11 +4,15 @@ body {
 }
 
 .navbar {
+   position: fixed;
+    top: 0;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #333;
     padding: 10px 20px;
+    z-index: 100;
 }
 
 .logo a {
@@ -30,6 +34,7 @@ body {
 }
 
 .nav-links a {
+    font-family: sans-serif;
     color: white;
     text-decoration: none;
     font-size: 18px;
