@@ -29,6 +29,69 @@
     #myBtn:hover {
         background-color: #333; /* Add a dark-grey background on hover */
     }
+        /* Team Section Title */
+.team-title {
+    text-align: center;
+    font-size: 2.5em;
+    margin: 40px 0 20px;
+    color: #333;
+}
+
+/* Team Gallery Layout */
+.team-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Team Card Styling */
+.team-card {
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 250px;
+    transition: transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.team-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Team Image */
+.team-image {
+    width: 100%;
+    height: auto;
+    border-bottom: 4px solid #c4b3b3;
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover .team-image {
+    transform: scale(1.1);
+}
+
+/* Team Info Styling */
+.team-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.team-info h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: #333;
+}
+
+.team-info p {
+    font-size: 1em;
+    color: #555;
+}
+
 </style>
 <body>
     <nav class="navbar">
@@ -128,21 +191,34 @@ Cost of Testing and Analysis: Monitoring and analyzing microplastic levels requi
                 </li>
             </ul></p></div>
     </section>
-    <h1>Meet the Our Team Members</h1>
-   <div class="image-gallery">
-        <!-- <h1>Meet Our Team Members</h1> -->
-
-        <img src="santoshpic.jpg" alt="Image 1" id="img1" class="gallery-image">
-        <p><h3><b>Santosh N (01)</b><br>
-        <i>12406212</i>
-        <p>I dedicated in detailed research and making complex topics easy to understand.</p></h3></p>
-        <img src="princepic.jpg" alt="Image 2" id="img2" class="gallery-image">
-        <p><h3>Prince Jaiswal (02)
-        <i>12406255</i><p>I lead the development and management of the website.</p></h3></p>
-        <img src="srishantpic.jpg" alt="Image 3" id="img3" class="gallery-image">
-        <p><h3>Balaraju Srishant (03)
-        <i>12406349</i><p>I manages websites documentation and contributes to content writing.</p></h3></p>
+   <h1 class="team-title">Meet Our Team Members</h1>
+<div class="team-gallery">
+    <div class="team-card fade-in">
+        <img src="santoshpic.jpg" alt="Santosh N" class="team-image">
+        <div class="team-info">
+            <h3>Santosh N (01)</h3>
+            <p><i>ID: 12406212</i></p>
+            <p>Dedicated to detailed research and making complex topics easy to understand.</p>
+        </div>
     </div>
+    <div class="team-card fade-in">
+        <img src="princepic.jpg" alt="Prince Jaiswal" class="team-image">
+        <div class="team-info">
+            <h3>Prince Jaiswal (02)</h3>
+            <p><i>ID: 12406255</i></p>
+            <p>Leads the development and management of the website.</p>
+        </div>
+    </div>
+    <div class="team-card fade-in">
+        <img src="srishantpic.jpg" alt="Balaraju Srishant" class="team-image">
+        <div class="team-info">
+            <h3>Balaraju Srishant (03)</h3>
+            <p><i>ID: 12406349</i></p>
+            <p>Manages documentation and contributes to content writing.</p>
+        </div>
+    </div>
+</div>
+
 
     <!-- <button onclick="changeImage()">Change Images</button> -->
 
@@ -190,7 +266,23 @@ Cost of Testing and Analysis: Monitoring and analyzing microplastic levels requi
             document.body.scrollIntoView({ behavior: "smooth" });
         }
     </script>
+    <script>document.addEventListener("DOMContentLoaded", function() {
+        const fadeElements = document.querySelectorAll(".fade-in");
     
+        const onScroll = () => {
+            fadeElements.forEach(element => {
+                const rect = element.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 50) {
+                    element.style.opacity = 1;
+                    element.style.transform = "translateY(0)";
+                }
+            });
+        };
+    
+        window.addEventListener("scroll", onScroll);
+        onScroll(); // trigger on page load
+    });
+    </script>
 
     
 </body>
